@@ -5,7 +5,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="http://shawnelee88.github.io//"/>
-  <updated>2015-07-09T13:33:24.000Z</updated>
+  <updated>2015-07-09T14:31:43.000Z</updated>
   <id>http://shawnelee88.github.io//</id>
   
   <author>
@@ -14,6 +14,36 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[hexo记录.md]]></title>
+    <link href="http://shawnelee88.github.io/2015/07/09/hexo%E8%AE%B0%E5%BD%95-md/"/>
+    <id>http://shawnelee88.github.io/2015/07/09/hexo记录-md/</id>
+    <published>2015-07-09T14:18:06.000Z</published>
+    <updated>2015-07-09T14:31:43.000Z</updated>
+    <content type="html"><![CDATA[<p>准备工作：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">npm <span class="operator"><span class="keyword">install</span> hexo-cli -g</span><br><span class="line">hexo init blog</span><br><span class="line">cd blog</span><br><span class="line">npm <span class="keyword">install</span></span><br><span class="line">hexo <span class="keyword">server</span></span></span><br></pre></td></tr></table></figure>
+<p>主要命令：</p>
+<figure class="highlight axapta"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">hexo <span class="keyword">new</span> <span class="string">"postName"</span> <span class="preprocessor">#新建文章</span></span><br><span class="line">hexo <span class="keyword">new</span> page <span class="string">"pageName"</span> <span class="preprocessor">#新建页面</span></span><br><span class="line">hexo generate <span class="preprocessor">#生成静态页面至public目录</span></span><br><span class="line">hexo <span class="keyword">server</span> <span class="preprocessor">#开启预览访问端口（默认端口4000，'ctrl + c'关闭server）</span></span><br><span class="line">hexo deploy <span class="preprocessor">#将.deploy目录部署到GitHub</span></span><br><span class="line"></span><br><span class="line">localhost:<span class="number">4000</span> 本地查看</span><br></pre></td></tr></table></figure>
+<p>参考文章：</p>
+<ul>
+<li><a href="http://cnfeat.com/2014/05/10/2014-05-11-how-to-build-a-blog/" target="_blank" rel="external">如何搭建一个独立博客——简明Github Pages与Hexo教程</a></li>
+<li>atom + hexo</li>
+<li><a href="https://hexo.io/zh-cn/" target="_blank" rel="external">hexo官网</a></li>
+</ul>
+]]></content>
+    <summary type="html">
+    <![CDATA[对hexo+github建站做个简单记录]]>
+    
+    </summary>
+    
+      <category term="github" scheme="http://shawnelee88.github.io/tags/github/"/>
+    
+      <category term="hexo" scheme="http://shawnelee88.github.io/tags/hexo/"/>
+    
+      <category term="杂货铺" scheme="http://shawnelee88.github.io/categories/%E6%9D%82%E8%B4%A7%E9%93%BA/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[Hello World]]></title>
