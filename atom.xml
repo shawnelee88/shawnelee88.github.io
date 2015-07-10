@@ -5,7 +5,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="http://shawnelee88.github.io//"/>
-  <updated>2015-07-10T15:35:57.000Z</updated>
+  <updated>2015-07-10T15:47:17.000Z</updated>
   <id>http://shawnelee88.github.io//</id>
   
   <author>
@@ -14,6 +14,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[IOS_FAQ]]></title>
+    <link href="http://shawnelee88.github.io/2015/07/10/IOS-FAQ/"/>
+    <id>http://shawnelee88.github.io/2015/07/10/IOS-FAQ/</id>
+    <published>2015-07-10T15:47:17.000Z</published>
+    <updated>2015-07-10T15:47:17.000Z</updated>
+    <content type="html"><![CDATA[<p>工具类</p>
+<ul>
+<li><a href="http://blog.csdn.net/ayaseeli/article/details/41725923" target="_blank" rel="external">xcode6如何创建空的Empty Application?</a></li>
+</ul>
+<p>语言小知识</p>
+<ul>
+<li>asdf</li>
+</ul>
+]]></content>
+    <summary type="html">
+    <![CDATA[关于工具以及ios开发的一些小tips]]>
+    
+    </summary>
+    
+      <category term="ios" scheme="http://shawnelee88.github.io/tags/ios/"/>
+    
+      <category term="oc" scheme="http://shawnelee88.github.io/tags/oc/"/>
+    
+      <category term="ios" scheme="http://shawnelee88.github.io/categories/ios/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[proxychains+shadowsocks神器]]></title>
@@ -52,39 +80,11 @@
   </entry>
   
   <entry>
-    <title><![CDATA[hexo记录.md]]></title>
-    <link href="http://shawnelee88.github.io/2015/07/09/IOS-FAQ/"/>
-    <id>http://shawnelee88.github.io/2015/07/09/IOS-FAQ/</id>
-    <published>2015-07-09T14:50:56.000Z</published>
-    <updated>2015-07-09T14:50:56.000Z</updated>
-    <content type="html"><![CDATA[<p>工具类</p>
-<ul>
-<li><a href="http://blog.csdn.net/ayaseeli/article/details/41725923" target="_blank" rel="external">xcode6如何创建空的Empty Application?</a></li>
-</ul>
-<p>语言小知识</p>
-<ul>
-<li>asdf</li>
-</ul>
-]]></content>
-    <summary type="html">
-    <![CDATA[关于工具以及ios开发的一些小tips]]>
-    
-    </summary>
-    
-      <category term="ios" scheme="http://shawnelee88.github.io/tags/ios/"/>
-    
-      <category term="oc" scheme="http://shawnelee88.github.io/tags/oc/"/>
-    
-      <category term="ios" scheme="http://shawnelee88.github.io/categories/ios/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[hexo记录.md]]></title>
+    <title><![CDATA[OC学习笔记]]></title>
     <link href="http://shawnelee88.github.io/2015/07/09/OC%E7%BC%96%E7%A8%8B%E5%AD%A6%E4%B9%A0/"/>
     <id>http://shawnelee88.github.io/2015/07/09/OC编程学习/</id>
     <published>2015-07-09T14:35:41.000Z</published>
-    <updated>2015-07-09T15:43:56.000Z</updated>
+    <updated>2015-07-10T15:47:44.000Z</updated>
     <content type="html"><![CDATA[<p>简介<br>oc以c语言为基础，加入了对面向对象编程（OOP）的支持。</p>
 <p>工具：xcode6</p>
 <p>书籍：《Objective-C编程》—Aaron Hillegass[美]</p>
@@ -125,12 +125,12 @@
   </entry>
   
   <entry>
-    <title><![CDATA[hexo记录.md]]></title>
+    <title><![CDATA[hexo建站记录]]></title>
     <link href="http://shawnelee88.github.io/2015/07/09/hexo%E8%AE%B0%E5%BD%95-md/"/>
     <id>http://shawnelee88.github.io/2015/07/09/hexo记录-md/</id>
     <published>2015-07-09T14:18:06.000Z</published>
-    <updated>2015-07-09T14:31:43.000Z</updated>
-    <content type="html"><![CDATA[<p>准备工作：</p>
+    <updated>2015-07-10T15:48:04.000Z</updated>
+    <content type="html"><![CDATA[<h1 id="hexo记录">hexo记录</h1><p>准备工作：</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">npm <span class="operator"><span class="keyword">install</span> hexo-cli -g</span><br><span class="line">hexo init blog</span><br><span class="line">cd blog</span><br><span class="line">npm <span class="keyword">install</span></span><br><span class="line">hexo <span class="keyword">server</span></span></span><br></pre></td></tr></table></figure>
 <p>主要命令：</p>
 <figure class="highlight axapta"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">hexo <span class="keyword">new</span> <span class="string">"postName"</span> <span class="preprocessor">#新建文章</span></span><br><span class="line">hexo <span class="keyword">new</span> page <span class="string">"pageName"</span> <span class="preprocessor">#新建页面</span></span><br><span class="line">hexo generate <span class="preprocessor">#生成静态页面至public目录</span></span><br><span class="line">hexo <span class="keyword">server</span> <span class="preprocessor">#开启预览访问端口（默认端口4000，'ctrl + c'关闭server）</span></span><br><span class="line">hexo deploy <span class="preprocessor">#将.deploy目录部署到GitHub</span></span><br><span class="line"></span><br><span class="line">localhost:<span class="number">4000</span> 本地查看</span><br></pre></td></tr></table></figure>
