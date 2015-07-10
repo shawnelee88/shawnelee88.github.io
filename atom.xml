@@ -5,7 +5,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="http://shawnelee88.github.io//"/>
-  <updated>2015-07-09T14:31:43.000Z</updated>
+  <updated>2015-07-10T15:35:57.000Z</updated>
   <id>http://shawnelee88.github.io//</id>
   
   <author>
@@ -14,6 +14,115 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[proxychains+shadowsocks神器]]></title>
+    <link href="http://shawnelee88.github.io/2015/07/10/proxychains-shadowsocks%E7%A5%9E%E5%99%A8/"/>
+    <id>http://shawnelee88.github.io/2015/07/10/proxychains-shadowsocks神器/</id>
+    <published>2015-07-10T15:14:11.000Z</published>
+    <updated>2015-07-10T15:35:57.000Z</updated>
+    <content type="html"><![CDATA[<p>安装了shadowsocks之后，只能网页出去逛逛，如果需要在command line中也能有同样的效果（ping不同，但是可以下载），需要配合proxychains4这个神器</p>
+<h2 id="安装">安装</h2><p>1.mac shadows安装简单</p>
+<p>2.proxychains</p>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">git clone http<span class="variable">s:</span>//github.<span class="keyword">com</span>/rofl0r/proxychains-ng.git</span><br><span class="line"><span class="keyword">cd</span> proxychains-ng</span><br><span class="line">./configure</span><br><span class="line">(sudo) <span class="keyword">make</span> &amp;&amp; <span class="keyword">make</span> install</span><br><span class="line"><span class="keyword">cp</span> ./src/proxychains.<span class="keyword">conf</span> /etc/proxychians.<span class="keyword">conf</span></span><br><span class="line"><span class="keyword">cd</span> .. &amp;&amp; rm -rf proxychains-ng</span><br><span class="line"></span><br><span class="line">或者</span><br><span class="line">brew install proxychains-ng  //mac</span><br></pre></td></tr></table></figure>
+<h2 id="修改配置">修改配置</h2><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">vim</span> /etc/proxychains.conf</span><br><span class="line">推荐配置</span><br><span class="line">strict_chain</span><br><span class="line">proxy_dns </span><br><span class="line">remote_dns_subnet <span class="number">224</span></span><br><span class="line">tcp_read_time_out <span class="number">15000</span></span><br><span class="line">tcp_connect_time_out <span class="number">8000</span></span><br><span class="line">localnet <span class="number">127.0.0.0</span>/<span class="number">255.0.0.0</span></span><br><span class="line">quiet_mode</span><br><span class="line"></span><br><span class="line">[ProxyList]</span><br><span class="line">socks5  <span class="number">127.0.0.1</span> <span class="number">1080</span></span><br></pre></td></tr></table></figure>
+<h2 id="使用">使用</h2><figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">proxychains4 curl https:<span class="comment">//www.twitter.com/</span></span><br><span class="line">proxychains4 git <span class="keyword">push</span> origin master</span><br></pre></td></tr></table></figure>
+<h2 id="测试proxychains4">测试proxychains4</h2><figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">wget <span class="keyword">https</span>://www.dropbox.com -v -O /dev/<span class="constant">null</span>   <span class="comment"> //直接输入这条语句连接不了</span></span><br><span class="line">proxychains4 wget <span class="keyword">https</span>://www.dropbox.com -v -O /dev/<span class="constant">null</span>  <span class="comment"> //加入proxychains4之后就可以顺利执行</span></span><br></pre></td></tr></table></figure>
+<p>参考来源：</p>
+<ul>
+<li><a href="https://github.com/shadowsocks/shadowsocks" target="_blank" rel="external">shadowsocks官网—github</a></li>
+<li><a href="https://github.com/rofl0r/proxychains-ng" target="_blank" rel="external">proxychains4神器官网—github</a></li>
+<li><a href="https://github.com/shadowsocks/shadowsocks/wiki/Using-Shadowsocks-with-Command-Line-Tools" target="_blank" rel="external">shadowsocks 官网wiki—配置proxychains</a></li>
+<li><a href="http://blog.ainhaato.moe/proxychains-socks5-shell/" target="_blank" rel="external">利用proxychains在终端使用socks5代理</a></li>
+<li><a href="http://blog.ihipop.info/2011/01/1988.html" target="_blank" rel="external">在终端下间接使用Socks5代理的几种方法(privoxy,tsocks,proxychains)—比较老，可以参考</a></li>
+<li><a href="http://wsgzao.github.io/post/fq/" target="_blank" rel="external">gfw小结</a></li>
+</ul>
+]]></content>
+    <summary type="html">
+    <![CDATA[shadowsocks+proxychains神器，一枝红杏出墙来]]>
+    
+    </summary>
+    
+      <category term="proxychains" scheme="http://shawnelee88.github.io/tags/proxychains/"/>
+    
+      <category term="shadowsocks" scheme="http://shawnelee88.github.io/tags/shadowsocks/"/>
+    
+      <category term="杂货铺" scheme="http://shawnelee88.github.io/categories/%E6%9D%82%E8%B4%A7%E9%93%BA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[hexo记录.md]]></title>
+    <link href="http://shawnelee88.github.io/2015/07/09/IOS-FAQ/"/>
+    <id>http://shawnelee88.github.io/2015/07/09/IOS-FAQ/</id>
+    <published>2015-07-09T14:50:56.000Z</published>
+    <updated>2015-07-09T14:50:56.000Z</updated>
+    <content type="html"><![CDATA[<p>工具类</p>
+<ul>
+<li><a href="http://blog.csdn.net/ayaseeli/article/details/41725923" target="_blank" rel="external">xcode6如何创建空的Empty Application?</a></li>
+</ul>
+<p>语言小知识</p>
+<ul>
+<li>asdf</li>
+</ul>
+]]></content>
+    <summary type="html">
+    <![CDATA[关于工具以及ios开发的一些小tips]]>
+    
+    </summary>
+    
+      <category term="ios" scheme="http://shawnelee88.github.io/tags/ios/"/>
+    
+      <category term="oc" scheme="http://shawnelee88.github.io/tags/oc/"/>
+    
+      <category term="ios" scheme="http://shawnelee88.github.io/categories/ios/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[hexo记录.md]]></title>
+    <link href="http://shawnelee88.github.io/2015/07/09/OC%E7%BC%96%E7%A8%8B%E5%AD%A6%E4%B9%A0/"/>
+    <id>http://shawnelee88.github.io/2015/07/09/OC编程学习/</id>
+    <published>2015-07-09T14:35:41.000Z</published>
+    <updated>2015-07-09T15:43:56.000Z</updated>
+    <content type="html"><![CDATA[<p>简介<br>oc以c语言为基础，加入了对面向对象编程（OOP）的支持。</p>
+<p>工具：xcode6</p>
+<p>书籍：《Objective-C编程》—Aaron Hillegass[美]</p>
+<h2 id="变量与类型">变量与类型</h2><p>变量使用前必须声明，理由有2：</p>
+<ul>
+<li>有了类型信息，编译器可以检测潜在的错误，比如将对字符串进行数学运算</li>
+<li>根据类型分配存储空间</li>
+</ul>
+<p>常用类型：<br>c语言5种常用类型：</p>
+<ul>
+<li>整型: int, short, long</li>
+<li>浮点: float, double</li>
+<li>字符: char</li>
+<li>指针: int *</li>
+<li>结构体: struct</li>
+</ul>
+<p>局部变量，全局变量，静态变量<br>局部变量：函数运行时才会存在<br>全局变量：函数外声明，到处可以访问，其他文件如需访问，用extern<br>静态变量：只有在该文件内可以访问</p>
+<h2 id="其他">其他</h2><p>xcode快捷方式<br>自动补全，主题，颜色。。。</p>
+<h1 id="参考：">参考：</h1><ul>
+<li><a href="http://www.coderyi.com/archives/397" target="_blank" rel="external">ios开发路线简述</a></li>
+<li><a href="https://github.com/Aufree/trip-to-iOS" target="_blank" rel="external">ios学习资料整理—github</a></li>
+<li><a href="https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/Introduction/Introduction.html" target="_blank" rel="external">Programming with Objective-C(官网)</a></li>
+<li><a href="http://cocoadevcentral.com/d/learn_objectivec/" target="_blank" rel="external">快速入门</a></li>
+<li><a href="http://code.taobao.org/p/iOSProgramming/src/Chapter2/RandomItems/" target="_blank" rel="external">taobao网上得课程代码</a></li>
+</ul>
+<h1 id="后续参考书籍">后续参考书籍</h1>]]></content>
+    <summary type="html">
+    <![CDATA[学习oc的一些记录]]>
+    
+    </summary>
+    
+      <category term="ios" scheme="http://shawnelee88.github.io/tags/ios/"/>
+    
+      <category term="oc" scheme="http://shawnelee88.github.io/tags/oc/"/>
+    
+      <category term="ios" scheme="http://shawnelee88.github.io/categories/ios/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[hexo记录.md]]></title>
