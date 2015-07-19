@@ -3,17 +3,18 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Archives: 2015 | Learn &amp; Think</title>
+  <title>MAC杂记 | Learn &amp; Think</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Learn & Think">
-<meta property="og:url" content="http://shawnelee88.github.io/archives/2015/index.html">
+  <meta name="description" content="Mac OSX的一些记录">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MAC杂记">
+<meta property="og:url" content="http://shawnelee88.github.io/2015/07/09/mac杂记/index.html">
 <meta property="og:site_name" content="Learn & Think">
-<meta property="og:description">
+<meta property="og:description" content="Mac OSX的一些记录">
+<meta property="og:updated_time" content="2015-07-19T01:48:04.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Learn & Think">
-<meta name="twitter:description">
+<meta name="twitter:title" content="MAC杂记">
+<meta name="twitter:description" content="Mac OSX的一些记录">
   
     <link rel="alternative" href="/atom.xml" title="Learn &amp; Think" type="application/atom+xml">
   
@@ -59,134 +60,80 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2015" class="archive-year">2015</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2015/07/16/hello-world/" class="archive-article-date">
-  <time datetime="2015-07-16T12:50:27.000Z" itemprop="datePublished">7月 16</time>
+        <section id="main"><article id="post-mac杂记" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/07/09/mac杂记/" class="article-date">
+  <time datetime="2015-07-09T14:35:41.000Z" itemprop="datePublished">2015-07-09</time>
 </a>
-      
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/mac/">mac</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/07/16/hello-world/">Hello World</a>
+    <h1 class="article-title" itemprop="name">
+      MAC杂记
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
+      </header>
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2015/07/10/IOS-FAQ/" class="archive-article-date">
-  <time datetime="2015-07-10T15:47:17.000Z" itemprop="datePublished">7月 10</time>
-</a>
+    <div class="article-entry" itemprop="articleBody">
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/07/10/IOS-FAQ/">IOS_FAQ</a>
-    </h1>
-  
+        <h3 id="技巧">技巧</h3><h4 id="显示隐藏文件：">显示隐藏文件：</h4><p>显示：<code>defaults write com.apple.finder AppleShowAllFiles -bool true</code></p>
+<p>隐藏：<code>defaults write com.apple.finder AppleShowAllFiles -bool false</code></p>
+<p>隐藏某个文件夹：<br><code>chflags hidden /Users/lee/Downloads/未命名文件夹</code></p>
+<p>取消隐藏某个文件夹<br><code>chflags nohidden /Users/lee/Downloads/未命名文件夹</code></p>
+<h4 id="objdump—otool">objdump—otool</h4><p>objdump是linux下的工具，而mac提供的是<a href="http://blog.csdn.net/x32sky/article/details/45099979" target="_blank" rel="external">otool</a>，<br><code>objdump -Sl 类似于 otool -tv</code></p>
+<p><a href="https://support.apple.com/zh-cn/HT204048" target="_blank" rel="external">mac安装windows(怎么卸载，怎么安装多个，todo)</a></p>
+<h4 id="DigitalOcean相关：">DigitalOcean相关：</h4><p>官网3部曲：</p>
+<p><a href="https://www.digitalocean.com/community/tutorials/how-to-connect-to-your-droplet-with-ssh" target="_blank" rel="external">How To Connect To Your Droplet with SSH</a></p>
+<p><a href="https://www.digitalocean.com/community/tutorials/initial-server-setup-with-ubuntu-14-04" target="_blank" rel="external">Initial Server Setup with Ubuntu 14.04</a></p>
+<p><a href="https://www.digitalocean.com/community/tutorials/additional-recommended-steps-for-new-ubuntu-14-04-servers" target="_blank" rel="external">Additional Recommended Steps for New Ubuntu 14.04 Servers</a></p>
+<h4 id="如何比较好的卸载nodejs相关">如何比较好的卸载nodejs相关</h4><p>使用相关shell脚本即可<a href="[uninstallNodejs.sh--github](https://github.com/jesseyu/uninstallNodejs/blob/master/uninstallNodejs.sh)">^node</a></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="shebang">#!/bin/bash</span></span><br><span class="line">lsbom <span class="operator">-f</span> <span class="operator">-l</span> <span class="operator">-s</span> -pf /var/db/receipts/org.nodejs.pkg.bom \</span><br><span class="line">| <span class="keyword">while</span> <span class="built_in">read</span> i; <span class="keyword">do</span></span><br><span class="line">  sudo rm /usr/<span class="built_in">local</span>/<span class="variable">$&#123;i&#125;</span></span><br><span class="line"><span class="keyword">done</span></span><br><span class="line">sudo rm -rf /usr/<span class="built_in">local</span>/lib/node \</span><br><span class="line">     /usr/<span class="built_in">local</span>/lib/node_modules \</span><br><span class="line">     /var/db/receipts/org.nodejs.*</span><br></pre></td></tr></table></figure>
+<h3 id="软件">软件</h3><p><a href="http://synergy-project.org/?utm_referrer=http%3A%2F%2Fsynergy-project.org%2Fdownload%2F&amp;utm_expid=35973112-5.LQhO_zr3R7mw69eKHqIeWg.0" target="_blank" rel="external">多屏幕局域网内鼠标键盘共享软件synergy</a></p>
 
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2015/07/10/proxychains-shadowsocks神器/" class="archive-article-date">
-  <time datetime="2015-07-10T15:14:11.000Z" itemprop="datePublished">7月 10</time>
-</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/07/10/proxychains-shadowsocks神器/">proxychains+shadowsocks神器</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2015/07/09/mac杂记/" class="archive-article-date">
-  <time datetime="2015-07-09T14:35:41.000Z" itemprop="datePublished">7月 9</time>
-</a>
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://shawnelee88.github.io/2015/07/09/mac杂记/" data-id="cic9wyibu000e3j9ue49pe1dj" class="article-share-link">Share</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/07/09/mac杂记/">MAC杂记</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2015/07/09/OC编程学习/" class="archive-article-date">
-  <time datetime="2015-07-09T14:35:41.000Z" itemprop="datePublished">7月 9</time>
-</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/07/09/OC编程学习/">OC学习笔记</a>
-    </h1>
-  
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mac/">mac</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/杂货铺/">杂货铺</a></li></ul>
 
-    </header>
+    </footer>
   </div>
-</article>
   
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2015/07/09/hexo记录-md/" class="archive-article-date">
-  <time datetime="2015-07-09T14:18:06.000Z" itemprop="datePublished">7月 9</time>
-</a>
-      
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/07/09/hexo记录-md/">hexo建站记录</a>
-    </h1>
+    <a href="/2015/07/10/proxychains-shadowsocks神器/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          proxychains+shadowsocks神器
+        
+      </div>
+    </a>
   
+  
+    <a href="/2015/07/09/OC编程学习/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">OC学习笔记</div>
+    </a>
+  
+</nav>
 
-    </header>
-  </div>
+  
 </article>
-  
-  
-    </div></section>
-  
+
 </section>
         
           <aside id="sidebar">

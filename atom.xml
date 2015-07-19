@@ -5,7 +5,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="http://shawnelee88.github.io//"/>
-  <updated>2015-07-10T15:47:17.000Z</updated>
+  <updated>2015-07-09T13:33:24.000Z</updated>
   <id>http://shawnelee88.github.io//</id>
   
   <author>
@@ -14,6 +14,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[Hello World]]></title>
+    <link href="http://shawnelee88.github.io/2015/07/16/hello-world/"/>
+    <id>http://shawnelee88.github.io/2015/07/16/hello-world/</id>
+    <published>2015-07-16T12:50:27.000Z</published>
+    <updated>2015-07-09T13:33:24.000Z</updated>
+    <content type="html"><![CDATA[<p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
+<h2 id="Quick_Start">Quick Start</h2><h3 id="Create_a_new_post">Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="http://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
+<h3 id="Run_server">Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="http://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
+<h3 id="Generate_static_files">Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="http://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
+<h3 id="Deploy_to_remote_sites">Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="http://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io]]>
+    </summary>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[IOS_FAQ]]></title>
@@ -80,20 +102,52 @@
   </entry>
   
   <entry>
+    <title><![CDATA[MAC杂记]]></title>
+    <link href="http://shawnelee88.github.io/2015/07/09/mac%E6%9D%82%E8%AE%B0/"/>
+    <id>http://shawnelee88.github.io/2015/07/09/mac杂记/</id>
+    <published>2015-07-09T14:35:41.000Z</published>
+    <updated>2015-07-19T01:48:04.000Z</updated>
+    <content type="html"><![CDATA[<h3 id="技巧">技巧</h3><h4 id="显示隐藏文件：">显示隐藏文件：</h4><p>显示：<code>defaults write com.apple.finder AppleShowAllFiles -bool true</code></p>
+<p>隐藏：<code>defaults write com.apple.finder AppleShowAllFiles -bool false</code></p>
+<p>隐藏某个文件夹：<br><code>chflags hidden /Users/lee/Downloads/未命名文件夹</code></p>
+<p>取消隐藏某个文件夹<br><code>chflags nohidden /Users/lee/Downloads/未命名文件夹</code></p>
+<h4 id="objdump—otool">objdump—otool</h4><p>objdump是linux下的工具，而mac提供的是<a href="http://blog.csdn.net/x32sky/article/details/45099979" target="_blank" rel="external">otool</a>，<br><code>objdump -Sl 类似于 otool -tv</code></p>
+<p><a href="https://support.apple.com/zh-cn/HT204048" target="_blank" rel="external">mac安装windows(怎么卸载，怎么安装多个，todo)</a></p>
+<h4 id="DigitalOcean相关：">DigitalOcean相关：</h4><p>官网3部曲：</p>
+<p><a href="https://www.digitalocean.com/community/tutorials/how-to-connect-to-your-droplet-with-ssh" target="_blank" rel="external">How To Connect To Your Droplet with SSH</a></p>
+<p><a href="https://www.digitalocean.com/community/tutorials/initial-server-setup-with-ubuntu-14-04" target="_blank" rel="external">Initial Server Setup with Ubuntu 14.04</a></p>
+<p><a href="https://www.digitalocean.com/community/tutorials/additional-recommended-steps-for-new-ubuntu-14-04-servers" target="_blank" rel="external">Additional Recommended Steps for New Ubuntu 14.04 Servers</a></p>
+<h4 id="如何比较好的卸载nodejs相关">如何比较好的卸载nodejs相关</h4><p>使用相关shell脚本即可<a href="[uninstallNodejs.sh--github](https://github.com/jesseyu/uninstallNodejs/blob/master/uninstallNodejs.sh)">^node</a></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="shebang">#!/bin/bash</span></span><br><span class="line">lsbom <span class="operator">-f</span> <span class="operator">-l</span> <span class="operator">-s</span> -pf /var/db/receipts/org.nodejs.pkg.bom \</span><br><span class="line">| <span class="keyword">while</span> <span class="built_in">read</span> i; <span class="keyword">do</span></span><br><span class="line">  sudo rm /usr/<span class="built_in">local</span>/<span class="variable">$&#123;i&#125;</span></span><br><span class="line"><span class="keyword">done</span></span><br><span class="line">sudo rm -rf /usr/<span class="built_in">local</span>/lib/node \</span><br><span class="line">     /usr/<span class="built_in">local</span>/lib/node_modules \</span><br><span class="line">     /var/db/receipts/org.nodejs.*</span><br></pre></td></tr></table></figure>
+<h3 id="软件">软件</h3><p><a href="http://synergy-project.org/?utm_referrer=http%3A%2F%2Fsynergy-project.org%2Fdownload%2F&amp;utm_expid=35973112-5.LQhO_zr3R7mw69eKHqIeWg.0" target="_blank" rel="external">多屏幕局域网内鼠标键盘共享软件synergy</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[Mac OSX的一些记录]]>
+    
+    </summary>
+    
+      <category term="mac" scheme="http://shawnelee88.github.io/tags/mac/"/>
+    
+      <category term="杂货铺" scheme="http://shawnelee88.github.io/tags/%E6%9D%82%E8%B4%A7%E9%93%BA/"/>
+    
+      <category term="mac" scheme="http://shawnelee88.github.io/categories/mac/"/>
+    
+  </entry>
+  
+  <entry>
     <title><![CDATA[OC学习笔记]]></title>
     <link href="http://shawnelee88.github.io/2015/07/09/OC%E7%BC%96%E7%A8%8B%E5%AD%A6%E4%B9%A0/"/>
     <id>http://shawnelee88.github.io/2015/07/09/OC编程学习/</id>
     <published>2015-07-09T14:35:41.000Z</published>
-    <updated>2015-07-10T15:47:44.000Z</updated>
-    <content type="html"><![CDATA[<p>简介<br>oc以c语言为基础，加入了对面向对象编程（OOP）的支持。</p>
+    <updated>2015-07-19T03:14:07.000Z</updated>
+    <content type="html"><![CDATA[<h2 id="简介">简介</h2><p>oc以c语言为基础，加入了对面向对象编程（OOP）的支持。</p>
 <p>工具：xcode6</p>
 <p>书籍：《Objective-C编程》—Aaron Hillegass[美]</p>
-<h2 id="变量与类型">变量与类型</h2><p>变量使用前必须声明，理由有2：</p>
-<ul>
+<h2 id="变量与类型">变量与类型</h2><h3 id="变量使用前必须声明，理由有2：">变量使用前必须声明，理由有2：</h3><ul>
 <li>有了类型信息，编译器可以检测潜在的错误，比如将对字符串进行数学运算</li>
 <li>根据类型分配存储空间</li>
 </ul>
-<p>常用类型：<br>c语言5种常用类型：</p>
+<h3 id="常用类型：">常用类型：</h3><p>c语言5种常用类型：</p>
 <ul>
 <li>整型: int, short, long</li>
 <li>浮点: float, double</li>
@@ -101,7 +155,58 @@
 <li>指针: int *</li>
 <li>结构体: struct</li>
 </ul>
-<p>局部变量，全局变量，静态变量<br>局部变量：函数运行时才会存在<br>全局变量：函数外声明，到处可以访问，其他文件如需访问，用extern<br>静态变量：只有在该文件内可以访问</p>
+<h3 id="id">id</h3><p><code>id</code>：声明指针时并不知道所指对象的准确类型。为此，可以使用id类型。id的含义是：指针，并可以指向任意类型的Objective-C对象.<br><figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">id <span class="keyword">delegate</span>; <span class="comment">//不需要使用星号，本身就有星号的作用</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="局部变量，全局变量，静态变量">局部变量，全局变量，静态变量</h3><p>局部变量：函数运行时才会存在，调用函数时自动分配，函数结束后自动释放，也称<code>自动变量</code><br>全局变量：函数外声明，到处可以访问，其他文件如需访问，用extern<br>静态变量：只有在该文件内可以访问</p>
+<hr>
+<h2 id="oc与框架（framework）">oc与框架（framework）</h2><p>框架：有很多类组成的库<br>类：负责描述某个特定类型的对象，包括实例方法（instance method）和实例变量（instance variable）<br>实例：通过某个类创建的对象</p>
+<h3 id="消息机制">消息机制</h3><h4 id="消息发送">消息发送</h4><p>消息发送必须写在一堆方括号中，并且必须包含以下两部分：<br>1.指针，指向接受消息的对象—接收方<br>2.方法名，要触发的方法的方法名—选择器<br>3.可以传入参数—参数<br><figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr_selector">[now dateByAddingTimeInterval:10000]</span>;</span><br><span class="line"><span class="attribute">now</span>:接收方</span><br><span class="line"><span class="attribute">dateByAddingTimeInterval</span>:选择器</span><br><span class="line"><span class="number">10000</span>:参数</span><br></pre></td></tr></table></figure></p>
+<p>要调用方法，就需要向对象发送对应的消息，此为与c语言不同的地方。</p>
+<h4 id="消息嵌套发送">消息嵌套发送</h4><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[[NSDate alloc] init]</span><br></pre></td></tr></table></figure>
+<p>系统会先向NSDate类发送alloc消息，得到返回值（指向新建的NSDate实例的指针），再向这个指针发送init消息，再返回该对象的指针，alloc负责分配内存，init负责初始化里面的数据</p>
+<h4 id="消息可以不带参数，也可以带多个参数">消息可以不带参数，也可以带多个参数</h4><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[<span class="built_in">NSDate</span> alloc]</span><br><span class="line"><span class="built_in">NSCalendar</span> *cal = [<span class="built_in">NSCalendar</span> currnetCalendar];</span><br><span class="line"><span class="built_in">NSUinteger</span> day = [cal ordinalityOfUnit:<span class="built_in">NSDayCalendarUnit</span> inUnit:<span class="built_in">NSMonthCalendarUnit</span> forDate:now];  </span><br><span class="line"><span class="comment">//方法为ordinalityOfUnit:inUnit:forDate:, 传入3个参数,用来计算某个某个日期是响应月份中的第几日</span></span><br></pre></td></tr></table></figure>
+<h4 id="方法也可以分为类方法以及对象方法">方法也可以分为类方法以及对象方法</h4><figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr_selector">[NSDate alloc]</span> <span class="comment">//对类NSDate发送alloc消息</span></span><br><span class="line"><span class="attr_selector">[NSDate alloc]</span> <span class="tag">init</span>]  <span class="comment">//alloc返回的结果是某个实例的指针，对该指针发送init消息</span></span><br></pre></td></tr></table></figure>
+<h4 id="向nil发送消息">向nil发送消息</h4><p>大多数语言中，不允许向nil发送消息，oc则不同，允许向nil发送消息，什么事情都不会发生。<br>note1：如果程序向某个对象发送了消息，但是没有得到预期的结果，需检查消息接收方是否为nil<br>note2：向nil发送消息，得到的返回值没有意义</p>
+<h4 id="@的几种含义">@的几种含义</h4><p>1.用在NSLog中<br>2.<code>%@</code>可以表示指向任何对象，会向对象发送<code>description</code>方法 eg:NSLog(@”%@…”)</p>
+<h3 id="NSArray">NSArray</h3><h4 id="两种枚举方法">两种枚举方法</h4><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">NSArray</span> *dateList = [<span class="built_in">NSArray</span> arrayWithObjects:date1, date2, date3];</span><br><span class="line"><span class="built_in">NSUInteger</span> count = [dateList count];</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; count; i++)&#123;[dateList objectAtIndex:i];&#125;  <span class="comment">//普通枚举</span></span><br><span class="line"><span class="keyword">for</span>(<span class="built_in">NSDate</span> *d <span class="keyword">in</span> dateList)&#123;&#125;    <span class="comment">//快速枚举，不应在枚举过程中增加或删除数组中的指针</span></span><br></pre></td></tr></table></figure>
+<h4 id="两种类型的数组">两种类型的数组</h4><p>1.NSArray,创建后不能增加或删除元素<br>2.NSMutableArray：可以增加或删除元素，是NSArray的子类<br>其他类也会有类似的两种不同类型，NSSet, NSMutableSet； NSDictionary,NSMutableDictionary</p>
+<hr>
+<h2 id="自定义类">自定义类</h2><h3 id="存取方法">存取方法</h3><p>3种存取方法<br>1.函数实现存取方法<br>2.点号存取<br>3.属性 property, synthesize</p>
+<figure class="highlight inform7"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">#import &lt;Foundation/Foundation.h&gt;   </span><br><span class="line">@interface <span class="keyword">Person</span> : NSObject </span><br><span class="line">&#123;     </span><br><span class="line">float heightInMeters;     </span><br><span class="line">int weightInKilos; </span><br><span class="line">&#125;   </span><br><span class="line">// 通过以下方法，可以存取相应的实例变量 </span><br><span class="line">- (float)heightInMeters; </span><br><span class="line">- (void)setHeightInMeters:(float)height; </span><br><span class="line">- (int)weightInKilos; </span><br><span class="line">- (void)setWeightInKilos:(int)weight; </span><br><span class="line"></span><br><span class="line"><span class="keyword">Person</span> *<span class="keyword">person</span> = <span class="comment">[]</span><span class="comment">[Person alloc]</span> init];</span><br><span class="line"><span class="comment">[person setWeightInKilos:96]</span>;  //函数实现存取方法</span><br><span class="line"><span class="comment">[person setHeightInMeters:1.8]</span>;</span><br><span class="line">int w = <span class="comment">[person weightInKilos]</span>;</span><br><span class="line">int h = <span class="comment">[person heightInMeters]</span>;</span><br><span class="line"><span class="keyword">person</span>.weightInKilos = 96;  //点号存取方法</span><br><span class="line"><span class="keyword">person</span>.heightInMeters = 1.8;</span><br><span class="line">int w1 = <span class="keyword">person</span>.weightInKilos;</span><br><span class="line">int h1 = <span class="keyword">person</span>.heightInMeters;</span><br><span class="line">//头文件中用@property属性</span><br><span class="line">@property float heightInMeters</span><br><span class="line">@property int weightInKilos;</span><br><span class="line">//实现文件中用@synthesize属性,会自动合成存取方法</span><br><span class="line">@synthesize heightInMeters, weightInKilos;</span><br></pre></td></tr></table></figure>
+<h3 id="self">self</h3><p>类似于c++的this指针，指向运行当前方法的对象的指针，当需要向自己发送消息时，就需要使用self。</p>
+<hr>
+<h2 id="继承">继承</h2><p>ios sdk中得类都继承自NSObject（直接或间接地），他虽然拥有很多方法，但是只有1个实例变量：<code>isa指针</code>，任何对象的isa指针都会指向创建该对象的类，可以理解为“is-a”</p>
+<blockquote>
+<p>任何直接或间接继承了NSObject的类，它的实例对象(instacne objec)中都有一个isa指针，指向它的类对象(class object)。这个类对象(class object)中存储了关于这个实例对象(instace object)所属的类的定义的一切：包括变量，方法，遵守的协议等等。<a href="[Objective-C内存布局--描述isa指针](http://blog.csdn.net/wishfly/article/details/7384708)">^isa</a>)</p>
+</blockquote>
+<p>消息的响应过程—继承链往上依次查找：</p>
+<p>假设程序向某个对象发送了一个fido消息。收到消息的对象为了能响应这个消息，会通过isa指针找到该对象的类并查询“是否有名为fido的实例方法？”如果这个类拥有名为fido的方法，就会执行之。如果没有，就会向该类的父类查询象会沿着继承链向上查询，直到找到名为fido的方法，或者到达继承链的顶端为止。如果一直没有找到fido方法，并且位于继承链顶端的NSObject也回答“没有实现fido方法”时，程序就会报错</p>
+<h3 id="super">super</h3><p>运行指定的方法，但是从对象的父类开始查找与之匹配的实现。与self相对应。</p>
+<hr>
+<h2 id="对象实例变量">对象实例变量</h2><p>指向另一个对象的指针，可用于描述相应两个对象之间的关系</p>
+<p>三种常见用途：<br>对象属性—指针，指向某个单一的、代表某个值的对象，比如NSString,NSNumber对象<br>一对一关系—指针，指向单个复杂的对象。比如Employee中有一个指向Person实例的指针。<br>一对多关系—指针，指向某个collection类的实例，比如Person中又一个指向NSMutableArray的指针，该array中包含多个child</p>
+<figure class="highlight inform7"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">@interface Employee:<span class="keyword">Person</span></span><br><span class="line">&#123;</span><br><span class="line">	int employeeID;</span><br><span class="line">	NSString *lastName;//对象属性</span><br><span class="line">	<span class="keyword">Person</span> *spouse;//一对一的关系</span><br><span class="line">	NSMutableArray *children;//一对多的关系</span><br><span class="line">&#125;</span><br><span class="line">@end</span><br></pre></td></tr></table></figure>
+<p>注意，对象只会保存其他对象的指针，而不是保存其他对象，可能会导致两个问题：<br>1.某个对象可能有多个角色，比如，其spouse还可能是多个child的紧急联系人<br>2.会导致产生大量独立的对象，耗尽可用内存，因此需要保留正在使用的对象，并释放那些不用的对象（内存回收）</p>
+<h3 id="对象所有权与ARC（Automatic_Reference_Count,自动引用计数）">对象所有权与ARC（Automatic Reference Count,自动引用计数）</h3><p>MRC(手动引用计数，Manual Reference Count),与ARC相对应<br>当某个对象的拥有方个数为0，可以判定程序不在需要该对象，从而释放该对象。（“拥有方”可以理解为“被其他人拥有”，有其他对象内的指针指向该对象，如果拥有方个数为0，就表示不被任何人拥有，而自己拥有别人就无所谓）<br><img src="http://image.webreader.duokan.com/mfsv2/download/s010/p01L1tXDQUAo/yS30wEQ1Ovrm9k.jpg" alt="image"><br>上图中描述了简单的单向拥有关系，有以下几个：<br>1.最左边的NSMutableArray拥有多个Employee<br>2.每个Employee拥有多个Asset<br>3.每个Asset拥有一个NSString</p>
+<p>对于这种情形，如果释放了NSMutableArray,则后续的所有对象都会被释放<br><img src="http://image.webreader.duokan.com/mfsv2/download/s010/p01zKSU37mYS/j9qVNJqlKV0A13.jpg" alt="image"><br>上图中描述了较复杂的双向拥有关系，除了上面提到的3点，还有1点：<br>1.每个Asset对象拥有各自的Employee，指向其对应的Employee对象</p>
+<p>对于这种情形，如果释放了NSMutableArray,凡是拥有Asset对象的Employee对象都没有释放，因为虽然Employee对Asset的拥有关系消失了，但是Asset还对对应的Employee对象存在拥有关系，只有拥有方不为0，就不会自动释放。这就叫<code>retain循环</code>，是造成内存泄露的常见原因。</p>
+<p>为了保证两个对象有一一对应的双向拥有关系，需要注意建立这种关系的时机（假设一个为父对象，一个为子对象）<a href="OC编程(2nd),chap20,避免内存泄露">^arc</a></p>
+<p>1.显式地设置这两个双向的关系,分别单独调用其设置关系的方法<br><figure class="highlight oxygene"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[father <span class="function"><span class="keyword">method</span>:</span>child]</span><br><span class="line">[child <span class="function"><span class="keyword">method</span>:</span>father]</span><br></pre></td></tr></table></figure></p>
+<p>2.在为子对象设置指向父对象的指针时，同时设置父对象对子对象的拥有关系<br><figure class="highlight nimrod"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">//child <span class="keyword">method</span></span><br><span class="line">-(<span class="type">void</span>) <span class="keyword">method</span>:(<span class="type">Fathertype</span> father)</span><br><span class="line">&#123;</span><br><span class="line">	holder = father;//为子对象设置指向父对象的指针</span><br><span class="line">	[father <span class="keyword">method</span>:self];//设置父对象对子对象的拥有关系，调用父对象的对应方法</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>3.在为父对象设置对子对象的拥有关系时，同时设置子对象对父对象的拥有关系<br><figure class="highlight nimrod"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">//father <span class="keyword">method</span></span><br><span class="line">-(<span class="type">void</span>)<span class="keyword">method</span>:(<span class="type">ChildType</span> c)</span><br><span class="line">&#123;</span><br><span class="line">	child = c;//为父对象设置对子对象的拥有关系</span><br><span class="line">	[c <span class="keyword">method</span>:self];//设置子对象对父对象的拥有关系,调用子对象的对应方法</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="如何分析内存泄露问题">如何分析内存泄露问题</h3><p>性能分析（profile） &amp; 性能分析工具（Instruments)—todo</p>
+<h3 id="如何解决retain循环问题">如何解决retain循环问题</h3><h4 id="weak修饰符_与_strong修饰符">weak修饰符 与 strong修饰符</h4><p><code>strong</code> : 对于这个指针指向的对象，需要主张所有权，即必须要有人指向他，拥有它。<code>如下面的例子，就表示Asset对象对NSString对象有拥有权。**</code>当没有人拥有它时，这个label指向的NSString对象就可以释放。释放时，会收到dealloc信息（从NSObject继承），可以覆盖此dealloc方法。</p>
+<p><code>__weak</code>:通过弱引用，可以解决<code>retain循环</code>问题。弱引用不主张所有权,如下面的例子，就表示Asset对象对holder没有拥有权,也就是说我们的Asset对象不会对其Employee对象存在拥有权，因此删除Employee对象的时候，所有对象都可以安全释放。</p>
+<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#import <span class="title">&lt;Foundation/Foundation.h&gt;</span> </span></span><br><span class="line"><span class="class"><span class="keyword">@class</span> <span class="title">Employee</span>;   </span></span><br><span class="line"><span class="class"><span class="keyword">@interface</span> <span class="title">Asset</span> : <span class="title">NSObject</span> </span></span><br><span class="line">&#123;     </span><br><span class="line"><span class="built_in">NSString</span> *label;     </span><br><span class="line">__<span class="keyword">weak</span> Employee *holder;  <span class="comment">//__weak修饰符，不主张所有权，也就是说Asset不会对它所对应的Employee对象存在拥有权   </span></span><br><span class="line"><span class="keyword">unsigned</span> <span class="keyword">int</span> resaleValue; </span><br><span class="line">&#125; </span><br><span class="line"><span class="keyword">@property</span> (<span class="keyword">strong</span>) <span class="built_in">NSString</span> *label; <span class="comment">//strong修饰符，必须主张所有权,也就是说这个Asset对象对NSString对象存在拥有权</span></span><br><span class="line"><span class="keyword">@property</span> (<span class="keyword">weak</span>) Employee *holder; <span class="keyword">@property</span> <span class="keyword">unsigned</span> <span class="keyword">int</span> resaleValue; <span class="keyword">@end</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>如果对象间是父子关系，那么为了避免retain循环，通常需要遵守规则：父对象拥有子对象，但是子对象不能拥有父对象</p>
+</blockquote>
+<h4 id="弱引用的自动清零特性">弱引用的自动清零特性</h4><p>为什么可以解决“retain循环”问题？<br>当某个由弱引用指向的对象被释放时，相应的指针变量会被归零，即赋为nil。</p>
+<h4 id="MRC(手动引用计数)">MRC(手动引用计数)</h4><p>参考C++中得智能指针，同时参考网页资料来理解reference count<a href="[Objective-c内存管理的历史和参考资料](http://www.pchou.info/ios/2015/06/05/oc-memory-management.html)">^mrc</a><br>可以理解为一个对象本身有一个引用计数的成员变量。当创建一个对象时，用一个指针指向这个对象。<br>oc中，如果新建一个对象并赋值，则这个对象初始化为1，只有retain,release操作可以改变引用计数的值。<br>如果调用retai，则会+1，<br>如果调用release，则会-1，<br>如果最后为0，则会自动释放该内存</p>
+<p>下面解释书中例子<br><figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//手动管理引用计数</span></span><br><span class="line"><span class="comment">//假设这里newEmp指向了一个Employee对象，这里需要设置holder也指向他</span></span><br><span class="line">- (<span class="typename">void</span>)<span class="string">setHolder:</span>(Employee *)newEmp </span><br><span class="line">&#123;     </span><br><span class="line">	[holder release]; <span class="comment">//原来holder可能有指向一个对象，这里需要先解除这个指向关系，也就是原来被指向的对象的拥有者先减少，也就是原来的对象的引用计数减少</span></span><br><span class="line">	[newEmp retain];  <span class="comment">//因为holder需要指向新的对象，也就是newEmp指向的对象，因此这个对象多了一个拥有者，因此引用不过计数需要增加</span></span><br><span class="line">	holder = newEmp; <span class="comment">//将holder指向新的一个Employee对象</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">- (<span class="typename">void</span>)dealloc </span><br><span class="line">&#123;     </span><br><span class="line">	[label release];   <span class="comment">//需要解除label的引用计数，以便自动释放内存  </span></span><br><span class="line">	[holder release];  <span class="comment">//需要解除holder对应关系，因此指向对象的引用计数需要-1</span></span><br><span class="line">	[<span class="keyword">super</span> dealloc];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p><img src="http://d.pcs.baidu.com/thumbnail/ba68bf5c4481babf34fba692d8ff93a9?fid=604950169-250528-435242864476861&amp;time=1437066000&amp;rt=pr&amp;sign=FDTAER-DCb740ccc5511e5e8fedcff06b081203-%2bHiwaKhovsC%2fTXFDHBMyUglqfPw%3d&amp;expires=8h&amp;prisign=unknow&amp;chkbd=0&amp;chkv=0&amp;size=c10000_u10000&amp;quality=90" alt="image"></p>
+<p>autorelease—todo<br>会在将来的某个时候收到release消息<br>什么时候收到release消息？当autorelease池（对象）被排干（drain）的时候<br><figure class="highlight nimrod"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">- (<span class="type">NSString</span> *)description &#123;     </span><br><span class="line">	<span class="type">NSString</span> *<span class="literal">result</span> = [[<span class="type">NSString</span> alloc] initWithFormat:@<span class="string">"&lt;%@: $%d &gt;"</span>,                                             [self label], [self resaleValue]];     </span><br><span class="line">	[<span class="literal">result</span> autorelease];     </span><br><span class="line">	<span class="keyword">return</span> <span class="literal">result</span>; </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 创建autorelease池（对象） </span><br><span class="line"><span class="type">NSAutoreleasePool</span> *arp = [[<span class="type">NSAutoreleasePool</span> alloc] init]; </span><br><span class="line"><span class="type">Asset</span> *asset = [[<span class="type">Asset</span> alloc] init];   </span><br><span class="line"><span class="type">NSString</span> *d = [asset description]; // d指针指向的<span class="type">NSString</span>对象已经在autorelease池中 </span><br><span class="line">[arp drain]; // description方法所返回的<span class="type">NSString</span>对象会收到release消息</span><br></pre></td></tr></table></figure></p>
+<p>虽然ARC会自动使用autorelease池，但是必须由程序创建并排空相应的autorelease池，如果开启了ARC极致，也加入了创建autorelease池的语法<br><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 创建autorelease池（对象） </span></span><br><span class="line"><span class="keyword">@autoreleasepool</span> &#123;     </span><br><span class="line">	Asset *asset = [[Asset alloc] init];     </span><br><span class="line">	<span class="built_in">NSString</span> *d = [asset description];     <span class="comment">// d指针指向的NSString对象已经在autorelease池中 </span></span><br><span class="line">&#125; <span class="comment">// autorelease池已经被排空</span></span><br></pre></td></tr></table></figure></p>
+<h4 id="retain计数规则">retain计数规则</h4><hr>
 <h2 id="其他">其他</h2><p>xcode快捷方式<br>自动补全，主题，颜色。。。</p>
 <h1 id="参考：">参考：</h1><ul>
 <li><a href="http://www.coderyi.com/archives/397" target="_blank" rel="external">ios开发路线简述</a></li>
@@ -109,8 +214,16 @@
 <li><a href="https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/Introduction/Introduction.html" target="_blank" rel="external">Programming with Objective-C(官网)</a></li>
 <li><a href="http://cocoadevcentral.com/d/learn_objectivec/" target="_blank" rel="external">快速入门</a></li>
 <li><a href="http://code.taobao.org/p/iOSProgramming/src/Chapter2/RandomItems/" target="_blank" rel="external">taobao网上得课程代码</a></li>
+<li><a href="http://blog.csdn.net/wishfly/article/details/7384708" target="_blank" rel="external">Objective-C内存布局—描述isa指针是什么</a></li>
 </ul>
-<h1 id="后续参考书籍">后续参考书籍</h1>]]></content>
+<h1 id="todo">todo</h1><ul>
+<li>ios4th</li>
+<li>性能分析工具</li>
+<li>实例练习</li>
+<li>开源项目</li>
+<li>搞起</li>
+</ul>
+<h1 id="参考链接">参考链接</h1>]]></content>
     <summary type="html">
     <![CDATA[学习oc的一些记录]]>
     
@@ -129,17 +242,22 @@
     <link href="http://shawnelee88.github.io/2015/07/09/hexo%E8%AE%B0%E5%BD%95-md/"/>
     <id>http://shawnelee88.github.io/2015/07/09/hexo记录-md/</id>
     <published>2015-07-09T14:18:06.000Z</published>
-    <updated>2015-07-10T15:48:04.000Z</updated>
+    <updated>2015-07-19T03:00:14.000Z</updated>
     <content type="html"><![CDATA[<h1 id="hexo记录">hexo记录</h1><p>准备工作：</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">npm <span class="operator"><span class="keyword">install</span> hexo-cli -g</span><br><span class="line">hexo init blog</span><br><span class="line">cd blog</span><br><span class="line">npm <span class="keyword">install</span></span><br><span class="line">hexo <span class="keyword">server</span></span></span><br></pre></td></tr></table></figure>
 <p>主要命令：</p>
 <figure class="highlight axapta"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">hexo <span class="keyword">new</span> <span class="string">"postName"</span> <span class="preprocessor">#新建文章</span></span><br><span class="line">hexo <span class="keyword">new</span> page <span class="string">"pageName"</span> <span class="preprocessor">#新建页面</span></span><br><span class="line">hexo generate <span class="preprocessor">#生成静态页面至public目录</span></span><br><span class="line">hexo <span class="keyword">server</span> <span class="preprocessor">#开启预览访问端口（默认端口4000，'ctrl + c'关闭server）</span></span><br><span class="line">hexo deploy <span class="preprocessor">#将.deploy目录部署到GitHub</span></span><br><span class="line"></span><br><span class="line">localhost:<span class="number">4000</span> 本地查看</span><br></pre></td></tr></table></figure>
+<p>安装中可能出现的错误</p>
+<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123; [<span class="string">Error:</span> Cannot find module <span class="string">'./build/default/DTraceProviderBindings'</span>] <span class="string">code:</span> <span class="string">'MODULE_NOT_FOUND'</span> &#125;</span><br><span class="line"></span><br><span class="line">&#123; [<span class="string">Error:</span> Cannot find module <span class="string">'./build/Debug/DTraceProviderBindings'</span>] <span class="string">code:</span> <span class="string">'MODULE_NOT_FOUND'</span> &#125;</span><br></pre></td></tr></table></figure>
+<p>解决方法[^module_not_found]<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm <span class="operator"><span class="keyword">install</span> hexo-generator-feed <span class="comment">--save</span></span><br><span class="line">npm <span class="keyword">install</span> hexo <span class="comment">--save</span></span></span><br></pre></td></tr></table></figure></p>
 <p>参考文章：</p>
 <ul>
 <li><a href="http://cnfeat.com/2014/05/10/2014-05-11-how-to-build-a-blog/" target="_blank" rel="external">如何搭建一个独立博客——简明Github Pages与Hexo教程</a></li>
 <li>atom + hexo</li>
 <li><a href="https://hexo.io/zh-cn/" target="_blank" rel="external">hexo官网</a></li>
+<li><a href="http://akarin.xyz/build-your-hexo-blog/" target="_blank" rel="external">hexo静态博客使用指南</a></li>
 </ul>
+<p>[^module_not_found]:<a href="https://github.com/hexojs/hexo-cli/issues/1" target="_blank" rel="external">hexo server启动错误</a></p>
 ]]></content>
     <summary type="html">
     <![CDATA[对hexo+github建站做个简单记录]]>
@@ -151,28 +269,6 @@
       <category term="hexo" scheme="http://shawnelee88.github.io/tags/hexo/"/>
     
       <category term="杂货铺" scheme="http://shawnelee88.github.io/categories/%E6%9D%82%E8%B4%A7%E9%93%BA/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[Hello World]]></title>
-    <link href="http://shawnelee88.github.io/2015/07/09/hello-world/"/>
-    <id>http://shawnelee88.github.io/2015/07/09/hello-world/</id>
-    <published>2015-07-09T13:33:24.000Z</published>
-    <updated>2015-07-09T13:33:24.000Z</updated>
-    <content type="html"><![CDATA[<p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick_Start">Quick Start</h2><h3 id="Create_a_new_post">Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run_server">Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate_static_files">Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy_to_remote_sites">Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io]]>
-    </summary>
     
   </entry>
   
