@@ -1,0 +1,520 @@
+
+ <!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  
+    <title>vim记录 | Learn &amp; Think</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    
+    <meta name="author" content="搬砖的">
+    
+
+    
+    <meta name="description" content="平台：MacOSX, MacVim
+推荐插件：spf13-vim
+简介
+支持Vim，Gvim，MacVim
+整洁，容易扩展，并且跨平台，易于安装维护
+跨平台：Windows, Linux, *nix, MacOS
+高度可定制：三个文件 ~/.vimrc.local, ~/.vimrc.bundles.local, ~/.vimrc.before.local
+
+安装MacVim &amp;amp; spf1">
+<meta property="og:type" content="article">
+<meta property="og:title" content="vim记录">
+<meta property="og:url" content="http://shawnelee88.github.io/2015/09/03/vim记录/index.html">
+<meta property="og:site_name" content="Learn & Think">
+<meta property="og:description" content="平台：MacOSX, MacVim
+推荐插件：spf13-vim
+简介
+支持Vim，Gvim，MacVim
+整洁，容易扩展，并且跨平台，易于安装维护
+跨平台：Windows, Linux, *nix, MacOS
+高度可定制：三个文件 ~/.vimrc.local, ~/.vimrc.bundles.local, ~/.vimrc.before.local
+
+安装MacVim &amp;amp; spf1">
+<meta property="og:updated_time" content="2015-09-07T15:25:35.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="vim记录">
+<meta name="twitter:description" content="平台：MacOSX, MacVim
+推荐插件：spf13-vim
+简介
+支持Vim，Gvim，MacVim
+整洁，容易扩展，并且跨平台，易于安装维护
+跨平台：Windows, Linux, *nix, MacOS
+高度可定制：三个文件 ~/.vimrc.local, ~/.vimrc.bundles.local, ~/.vimrc.before.local
+
+安装MacVim &amp;amp; spf1">
+
+    
+    <link rel="alternative" href="/atom.xml" title="Learn &amp; Think" type="application/atom+xml">
+    
+    
+    <link rel="icon" href="/img/favicon.ico">
+    
+    
+    <link rel="apple-touch-icon" href="/img/jacman.jpg">
+    <link rel="apple-touch-icon-precomposed" href="/img/jacman.jpg">
+    
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+</head>
+
+  <body>
+    <header>
+      
+<div>
+		
+			<div id="imglogo">
+				<a href="/"><img src="/img/logo.png" alt="Learn &amp; Think" title="Learn &amp; Think"/></a>
+			</div>
+			
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="Learn &amp; Think">Learn &amp; Think</a></h1>
+				<h2 class="blog-motto"></h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					<ul>
+					 
+						<li><a href="/">Home</a></li>
+					
+						<li><a href="/archives">Archives</a></li>
+					
+						<li><a href="/tags">Tags</a></li>
+					
+						<li><a href="/categories">Categories</a></li>
+					
+					<li>
+ 					
+					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
+						<label>Search</label>
+						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="搜索" />
+						<input type="hidden" name="q" value="site:shawnelee88.github.io">
+					</form>
+					
+					</li>
+				</ul>
+			</nav>			
+</div>
+    </header>
+    <div id="container">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+  
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2015/09/03/vim记录/" title="vim记录" itemprop="url">vim记录</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="搬砖的" target="_blank" itemprop="author">搬砖的</a>
+		
+  <p class="article-time">
+    <time datetime="2015-09-02T19:33:28.000Z" itemprop="datePublished"> 发表于 2015-09-03</time>
+    
+  </p>
+</header>
+	<div class="article-content">
+		
+		<p>平台：MacOSX, MacVim</p>
+<p>推荐插件：spf13-vim</p>
+<h2 id="简介">简介</h2><ul>
+<li>支持Vim，Gvim，MacVim</li>
+<li>整洁，容易扩展，并且跨平台，易于安装维护</li>
+<li>跨平台：Windows, Linux, *nix, MacOS</li>
+<li>高度可定制：三个文件 ~/.vimrc.local, ~/.vimrc.bundles.local, ~/.vimrc.before.local</li>
+</ul>
+<h2 id="安装MacVim_&amp;_spf13">安装MacVim &amp; spf13</h2><p>为了让各种插件能正常工作，特别是<code>neocomplete</code>这个插件,需要安装特殊的MacVim版本：<a href="https://github.com/Shougo/neocomplete.vim#requirements" target="_blank" rel="external">Vim with lua</a><br>安装MacVim<br><figure class="highlight brainfuck"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">brew</span> <span class="comment">install</span> <span class="comment">macvim</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">with</span><span class="literal">-</span><span class="comment">cscope</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">with</span><span class="literal">-</span><span class="comment">lua</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">HEAD</span></span><br></pre></td></tr></table></figure></p>
+<p>安装spf13, Requires Git 1.7+ and Vim 7.3+<br><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl http<span class="variable">s:</span>//<span class="keyword">j</span>.mp/spf13-vim3 -L &gt; spf13-<span class="keyword">vim</span>.<span class="keyword">sh</span> &amp;&amp; <span class="keyword">sh</span> spf13-<span class="keyword">vim</span>.<span class="keyword">sh</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="如何使用">如何使用</h2><p>系统自带了3个文件：</p>
+<ul>
+<li>~/.vimrc</li>
+<li>~/.vimrc.before</li>
+<li>~/.vimrc.bundles</li>
+</ul>
+<p>对应如果需要修改，则在本地创建local版本</p>
+<ul>
+<li>~/.vimrc.local</li>
+<li>~/.vimrc.before.local</li>
+<li>~/.vimrc.bundles.local</li>
+</ul>
+<h3 id="三个文件分别是干嘛用的？看各个文件的notes">三个文件分别是干嘛用的？看各个文件的notes</h3><p>~/.vimrc:基本的配置信息</p>
+<p>~/.vimrc.before文件<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">"   This file is for options which must be <span class="operator"><span class="keyword">set</span> *<span class="keyword">before</span>* plugins</span><br><span class="line"><span class="string">"   are loaded and the main .vimrc config is run. Most of these</span><br><span class="line">"</span>   <span class="keyword">are</span> <span class="keyword">for</span> preventing mappings <span class="keyword">or</span> commands <span class="keyword">from</span> being created.</span><br><span class="line">先导入的是<span class="keyword">before</span>文件中的配置信息，此文件中的信息一般是一些控制选项，需要在插件加载以及.vimrc</span><br><span class="line">加载之前导入到vim运行环境中。大多是用来禁止一些映射以及命令。</span><br><span class="line">.vimrc.<span class="keyword">before</span><span class="comment">--spf13自带，可参考，最好不修改</span></span><br><span class="line">.vimrc.<span class="keyword">before</span>.fork<span class="comment">--可以不用</span></span><br><span class="line">.vimrc.<span class="keyword">before</span>.<span class="keyword">local</span><span class="comment">--如果需要本地定制，在此文件中添加配置信息</span></span></span><br></pre></td></tr></table></figure></p>
+<p>~/.vimrc.bundles文件<br><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"   This file imports the various plugins of spf13. If you</span><br><span class="line"></span><span class="string">"   wish to alter which groups are imported, see vimrc.before.</span><br><span class="line"></span><span class="string">"   If you wish to add or remove individual bundles, create</span><br><span class="line"></span><span class="string">"   ~/.vimrc.bundles.local and `Bundle` or `UnBundle` as needed</span><br><span class="line"></span><span class="string">"   from there.</span><br><span class="line"></span>然后导入bundles文件，里面是插件信息。其中有一个很重要的变量表示不同的使用用途或配置选项</span><br><span class="line">spf13_bundle_groups=[<span class="string">'general'</span>, <span class="string">'writing'</span>, <span class="string">'neocomplete'</span>, <span class="string">'programming'</span>, <span class="string">'php'</span>, <span class="string">'ruby'</span>, <span class="string">'python'</span>, <span class="string">'javascript'</span>, <span class="string">'html'</span>, <span class="string">'misc'</span>,]</span><br><span class="line">理论上这个配置应该在before文件中定义，而.vimrc.before中并没有定义，因此需要在.vimrc.before.local</span><br><span class="line">中自定义，而且还可以通过<span class="string">'Bundle'</span>,<span class="string">'UnBundle'</span>来添加或删除插件</span><br><span class="line">如果完全不需要bundles文件中的插件，而是自定义插件安装的话，则需要在.vimrc.before.local中添加</span><br><span class="line">配置选项`<span class="keyword">let</span> <span class="variable">g:override_spf13_bundles</span> = <span class="number">1</span>`</span><br></pre></td></tr></table></figure></p>
+<p>添加或删除插件的例子<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//.vimrc.bundles.local</span></span><br><span class="line">eg.</span><br><span class="line">Bundle <span class="string">'powerline/fonts'</span></span><br><span class="line">UnBundle <span class="string">'scrooloose/syntastic'</span></span><br><span class="line">再输入</span><br><span class="line">vim +BundleInstall! +BundleClean +<span class="tag">q</span></span><br><span class="line">如果vundle是最新版本，可以试试</span><br><span class="line">:PluginInstall</span><br><span class="line">vim +PluginInstall +qall</span><br></pre></td></tr></table></figure></p>
+<h2 id="配置修改">配置修改</h2><p>自己设置Leader—;<br>修改所有leader—&gt;Leader<br>使用gundo代替undotree，设置</p>
+<h2 id="插件介绍">插件介绍</h2><h3 id="Gundo代替Undotree">Gundo代替Undotree</h3><blockquote>
+<p>visualize your Vim undo tree</p>
+</blockquote>
+<p>设置：.vimrc.local<br>nnoremap <leader>u :GundoToggle<cr></cr></leader></p>
+<h3 id="NERDTree">NERDTree</h3><h2 id="推荐阅读：">推荐阅读：</h2><p><a href="http://feihu.me/blog/2014/intro-to-vim/" target="_blank" rel="external">跟我一起学习vim—the life changing editor</a></p>
+<p><a href="https://github.com/yangyangwithgnu/use_vim_as_ide#2" target="_blank" rel="external">所需即所获：像 IDE 一样使用 vim</a></p>
+<p><a href="http://vim.spf13.com/#vimrc" target="_blank" rel="external">官网</a><br><a href="https://github.com/spf13/spf13-vim" target="_blank" rel="external">Github</a></p>
+  
+	</div>
+		<footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/杂记/">杂记</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/MacVim/">MacVim</a>
+  </div>
+
+</div>
+
+
+
+	<div class="article-share" id="share">
+	
+	  <div data-url="http://shawnelee88.github.io/2015/09/03/vim记录/" data-title="vim记录 | Learn &amp; Think" data-tsina="null" class="share clearfix">
+	  </div>
+	
+	</div>
+
+
+</footer>
+
+   	       
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
+
+<div class="next">
+<a href="/2015/08/18/斯坦福大学公开课-iOS7开发/"  title="斯坦福大学公开课_iOS7开发">
+ <strong>下一篇：</strong><br/> 
+ <span>斯坦福大学公开课_iOS7开发
+</span>
+</a>
+</div>
+
+</nav>
+
+	
+<section id="comments" class="comment">
+	<div class="ds-thread" data-thread-key="2015/09/03/vim记录/" data-title="vim记录" data-url="http://shawnelee88.github.io/2015/09/03/vim记录/"></div>
+</section>
+
+
+</div>  
+      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
+<aside class="clearfix">
+
+  
+<div class="categorieslist">
+	<p class="asidetitle">分类</p>
+		<ul>
+		
+		  
+			<li><a href="/categories/iOS/" title="iOS">iOS<sup>4</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/mac/" title="mac">mac<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/杂记/" title="杂记">杂记<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/杂货铺/" title="杂货铺">杂货铺<sup>2</sup></a></li>
+		  
+		
+		</ul>
+</div>
+
+
+  
+  <div class="archiveslist">
+    <p class="asidetitle"><a href="/archives">归档</a></p>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/09/">九月 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/08/">八月 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/07/">七月 2015</a><span class="archive-list-count">7</span></li></ul>
+  </div>
+
+
+  
+  <div class="tagcloudlist">
+    <p class="asidetitle">标签云</p>
+    <div class="tagcloudlist clearfix">
+       <a href="/tags/MacVim/" style="font-size: 10px;">MacVim</a> <a href="/tags/OC/" style="font-size: 15px;">OC</a> <a href="/tags/Swift/" style="font-size: 10px;">Swift</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/iOS/" style="font-size: 20px;">iOS</a> <a href="/tags/mac/" style="font-size: 10px;">mac</a> <a href="/tags/oc/" style="font-size: 15px;">oc</a> <a href="/tags/proxychains/" style="font-size: 10px;">proxychains</a> <a href="/tags/shadowsocks/" style="font-size: 10px;">shadowsocks</a> <a href="/tags/杂货铺/" style="font-size: 10px;">杂货铺</a>
+    </div>
+  </div>
+
+
+  <div class="linkslist">
+  <p class="asidetitle">友情链接</p>
+    <ul>
+        
+          <li>
+            
+            	<a href="http://wuchong.me" target="_blank" title="Jark&#39;s Blog">Jark&#39;s Blog</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://coolshell.cn" target="_blank" title="酷壳--耗子哥">酷壳--耗子哥</a>
+            
+          </li>
+        
+    </ul>
+</div>
+
+  <div class="rsspart">
+	<a href="/atom.xml" target="_blank" title="rss">RSS 订阅</a>
+</div>
+
+</aside>
+</div>
+    </div>
+    <footer><div id="footer" >
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<section class="info">
+		<p> Hello ,I&#39;m ShawneLee in Hangzhou. <br/>
+			This is my blog,believe it or not.</p>
+	</section>
+	 
+	<div class="social-font" class="clearfix">
+		
+		<a href="http://weibo.com/1787656932" target="_blank" class="icon-weibo" title="微博"></a>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		<a href="mailto:shawnelee88@163.com" target="_blank" class="icon-email" title="Email Me"></a>
+		
+	</div>
+			
+		
+
+		<p class="copyright">
+		Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2015 
+		
+		<a href="/about" target="_blank" title="搬砖的">搬砖的</a>
+		
+		
+		</p>
+</div>
+</footer>
+    <script src="/js/jquery-2.0.3.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/jquery.qrcode-0.12.0.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+  
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else{
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+        
+    }
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  c.click(function(){
+    ta.css('display', 'block').addClass('fadeIn');
+  });
+  o.click(function(){
+    ta.css('display', 'none');
+  });
+  $(window).scroll(function(){
+    ta.css("top",Math.max(140,320-$(this).scrollTop()));
+  });
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina'),
+      description = $this.attr('description');
+  var html = [
+  '<div class="hoverqrcode clearfix"></div>',
+  '<a class="overlay" id="qrcode"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="微信"></a>',
+  '<a href="http://widget.renren.com/dialog/share?resourceUrl=' + encodedUrl + '&srcUrl=' + encodedUrl + '&title=' + title +'" class="article-share-renren" target="_blank" title="人人"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="微博"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+
+  $('.hoverqrcode').hide();
+
+  var myWidth = 0;
+  function updatehoverqrcode(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+    var qrsize = myWidth > 1024 ? 200:100;
+    var options = {render: 'image', size: qrsize, fill: '#2ca6cb', text: url, radius: 0.5, quiet: 1};
+    var p = $('.article-share-qrcode').position();
+    $('.hoverqrcode').empty().css('width', qrsize).css('height', qrsize)
+                          .css('left', p.left-qrsize/2+20).css('top', p.top-qrsize-10)
+                          .qrcode(options);
+  };
+  $(window).resize(function(){
+    $('.hoverqrcode').hide();
+  });
+  $('.article-share-qrcode').click(function(){
+    updatehoverqrcode();
+    $('.hoverqrcode').toggle();
+  });
+  $('.article-share-qrcode').hover(function(){}, function(){
+      $('.hoverqrcode').hide();
+  });
+});   
+</script>
+
+
+
+<script type="text/javascript">
+  var duoshuoQuery = {short_name:"shawnelee88"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+</script> 
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.article-content').each(function(i){
+    $(this).find('img').each(function(){
+      if ($(this).parent().hasClass('fancybox')) return;
+      var alt = this.alt;
+      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
+      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
+    });
+    $(this).find('.fancybox').each(function(){
+      $(this).attr('rel', 'article' + i);
+    });
+  });
+  if($.fancybox){
+    $('.fancybox').fancybox();
+  }
+}); 
+</script>
+
+
+
+<!-- Analytics Begin -->
+
+
+
+
+
+<!-- Analytics End -->
+
+<!-- Totop Begin -->
+
+	<div id="totop">
+	<a title="返回顶部"><img src="/img/scrollup.png"/></a>
+	</div>
+	<script src="/js/totop.js"></script>
+
+<!-- Totop End -->
+
+<!-- MathJax Begin -->
+<!-- mathjax config similar to math.stackexchange -->
+
+
+<!-- MathJax End -->
+
+<!-- Tiny_search Begin -->
+
+<!-- Tiny_search End -->
+
+  </body>
+</html>

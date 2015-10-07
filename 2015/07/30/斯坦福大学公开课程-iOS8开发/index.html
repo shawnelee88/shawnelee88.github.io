@@ -1,0 +1,504 @@
+
+ <!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  
+    <title>斯坦福大学公开课程_iOS8开发 | Learn &amp; Think</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    
+    <meta name="author" content="搬砖的">
+    
+
+    
+    <meta name="description" content="根据“斯坦福大学公开课-iOS8开发”课程记录一下课程要点与自己的想法，具体的东西可以参考文档或视频来进行理解，本文档不是通用性的iOS教程。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="斯坦福大学公开课程_iOS8开发">
+<meta property="og:url" content="http://shawnelee88.github.io/2015/07/30/斯坦福大学公开课程-iOS8开发/index.html">
+<meta property="og:site_name" content="Learn & Think">
+<meta property="og:description" content="根据“斯坦福大学公开课-iOS8开发”课程记录一下课程要点与自己的想法，具体的东西可以参考文档或视频来进行理解，本文档不是通用性的iOS教程。">
+<meta property="og:updated_time" content="2015-08-09T03:04:19.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="斯坦福大学公开课程_iOS8开发">
+<meta name="twitter:description" content="根据“斯坦福大学公开课-iOS8开发”课程记录一下课程要点与自己的想法，具体的东西可以参考文档或视频来进行理解，本文档不是通用性的iOS教程。">
+
+    
+    <link rel="alternative" href="/atom.xml" title="Learn &amp; Think" type="application/atom+xml">
+    
+    
+    <link rel="icon" href="/img/favicon.ico">
+    
+    
+    <link rel="apple-touch-icon" href="/img/jacman.jpg">
+    <link rel="apple-touch-icon-precomposed" href="/img/jacman.jpg">
+    
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+</head>
+
+  <body>
+    <header>
+      
+<div>
+		
+			<div id="imglogo">
+				<a href="/"><img src="/img/logo.png" alt="Learn &amp; Think" title="Learn &amp; Think"/></a>
+			</div>
+			
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="Learn &amp; Think">Learn &amp; Think</a></h1>
+				<h2 class="blog-motto"></h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					<ul>
+					 
+						<li><a href="/">Home</a></li>
+					
+						<li><a href="/archives">Archives</a></li>
+					
+						<li><a href="/tags">Tags</a></li>
+					
+						<li><a href="/categories">Categories</a></li>
+					
+					<li>
+ 					
+					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
+						<label>Search</label>
+						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="搜索" />
+						<input type="hidden" name="q" value="site:shawnelee88.github.io">
+					</form>
+					
+					</li>
+				</ul>
+			</nav>			
+</div>
+    </header>
+    <div id="container">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+  
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2015/07/30/斯坦福大学公开课程-iOS8开发/" title="斯坦福大学公开课程_iOS8开发" itemprop="url">斯坦福大学公开课程_iOS8开发</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="搬砖的" target="_blank" itemprop="author">搬砖的</a>
+		
+  <p class="article-time">
+    <time datetime="2015-07-30T15:01:27.000Z" itemprop="datePublished"> 发表于 2015-07-30</time>
+    
+  </p>
+</header>
+	<div class="article-content">
+		
+		<h2 id="Lecture1-_Developing_Applications_for_iOS">Lecture1. Developing Applications for iOS</h2><p>从例子入手，视频讲解了一个Calculator的例子<br>1.创建project类型<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">iOS--single view application</span><br><span class="line">Product Name:Calculator</span><br><span class="line">Organization Name:zju</span><br><span class="line">Organization Identifier:io<span class="class">.github</span><span class="class">.shawnelee88</span></span><br><span class="line">Language:Swift</span><br><span class="line">Devices:<span class="function"><span class="title">universal</span><span class="params">(iPhone, iPad)</span></span></span><br><span class="line">core data: no <span class="function"><span class="title">need</span><span class="params">(not db oriented)</span></span></span><br></pre></td></tr></table></figure></p>
+<p>创建好之后我们暂时只需要关注下面两个文件：ViewController.swift(act as Controller), Main.storyboard(act as View, UI), main.storyboard文件只关注界面显示以及按钮放置， 具体的控制交由ViewController.swift文件完成，比如点击“+”按钮，会进行加法运算，并将结果进行显示.<br>点击Main.storyboard进去就能看到一个方框，叫做场景scenes(represents kind of phone full of information)屏幕切换的时候涉及到， storyboard可能有多个secnes，以便管理不同屏幕切换</p>
+<p>下面设计到具体的Calculator的设计<br>1.calculaor UI组成部分：一个文本框用来显示输入的数字以及运算结果，多个数字，多个运算符；各种按钮<br>2.label相关：</p>
+<ul>
+<li>放置控件时会出现蓝线，按蓝线对齐，后续autolayout会用到</li>
+<li>label可调整大小，位置，编辑文本内容（文本初始写为0，文本字体，大小，颜色，对齐等也可编辑，我们选择右对齐）</li>
+</ul>
+<p>Q:做一定的设置之后直接运行，但是却看不到之前scene中的label中设置的“0”?</p>
+<p>A:scene是方形的，而实际的iPhone设备是长方形的，比例不对，所以可能导致部分文字内容显示不对，因此需要autolayout</p>
+<p>Q:那为什么UI中得scene设计为方形的呢？为啥不跟iPhone比例一致呢？</p>
+<p>A:因为这种iOS界面设计，是将其他内容放在这个方形中，并给所有内容添加规则(rule)（当他们被压扁时会发生什么变化，根据不同的设备类型进行相应的水平或垂直变化），这些规则我们称之为约束（constraints）。因此这里可以理解为UI中需要考虑相对的变化趋势就可以，具体让UI根据不同设备尺寸自适应。</p>
+<p>Q;如何添加规则限制?</p>
+<p>A:1.比如需要将文本框设置为对齐右边界，则按住ctrl并拖动文本框向右，到达右边界之后释放拖动，会自动弹出菜单供选择<br>(1)trailling space to container margin—距离容器的右间距<br>(2)center vertically in container—使label垂直居中于这个容器<br>(3)equal widths—label的宽度与容器相同（不是我们想要的，我们需要留一点间距）<br>(4)equal heights<br>(5)aspect ratio—todo<br>之后会出现黄色或橙色的线，表示已经定义了规则，但是还不完整（因为暂时值定义了右边距）<br>,此需要确定完整的水平以及垂直方向的所有限制<br>2.左边界设置，左边距ctrl并拖动label向左，释放并弹出菜单<br>(1)leading space to container margin—距离容器的左边距<br>(2)(3)(4)(5)内容与上面相同<br>3.上边界设置<br>(1)top space to top layout guide (2)(3)(4)(5)<br>至此，水平防线就会出现蓝线，表示水平方向的已经完成,但是垂直方向还缺少下边框的设置。<br>4.下边界设置<br>比如我们希望按照我们文本的大小来设置，仍然会有橙色的告警，这是需要点击左下方的按钮（文档大纲，document outline）,<br>左下方有文档大纲按钮，如果还存在规则问题，会在树状目录顶端的“view Controller scene”右侧出现一个向右的箭头， 根据这个里面的具体提示进行修改<br>(1)update frame—根据我们的设置进行constras设置，常用<br>(2)update constraints—使用当前设置,force constraints,不常用<br>(3)reset to suggested constraints—会把constraints与蓝线重合，可以用<br>完了之后就完全与蓝线重合，运行模拟器，无论对窗口如何旋转，label的”0”都能正确显示在右上方<br>这就是<code>autolayout</code>的部分概念</p>
+<p>Q:规则冲突或有问题怎么解决？如何取消规则？</p>
+<p>A:也可以按照上面的方法根据提示来解决规则冲突的问题。</p>
+<p>基本的UI界面设置完成后，接下来就是建立UI元素与代码的关联。<br>1.右上角两个圈圈（assitant editor）的按钮，将代码与UI同时显示，便于操作<br>2.将UI中得label与代码中得label像关联，只需要按住ctrl并拖动到代码中，设置合适的变量名称，类型，连接类型，存储类型等，对应代码左边会出现黑色的小圆圈来标记,并会自动在代码中创建一个label指针<br>3.按钮也类似，并指明相关的其他参数，比如触发事件等,只不过其连接方式是“Action”表示这是一个方法</p>
+<blockquote>
+<p>Tip:按alt移动鼠标到不同位置，再单击可快速看变量的信息</p>
+<p>Tip:按ctrl并拖动不同的空间，即可以设置其边界属性，也可以与代码进行关联</p>
+</blockquote>
+<figure class="highlight nimrod"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="type">UIKit</span></span><br><span class="line">//class definition, inherits <span class="keyword">from</span> <span class="type">UIViewController</span></span><br><span class="line">class <span class="type">ViewController</span>: <span class="type">UIViewController</span>  //single inheritance,单继承</span><br><span class="line">&#123;</span><br><span class="line">    //instance variables(property) &amp; methods，类中定义实例变量与实例方法</span><br><span class="line">    //define a property</span><br><span class="line">    //<span class="type">UILabel</span>!--optional</span><br><span class="line">    //@<span class="type">IBOutlet</span>--对应instance variable</span><br><span class="line">    //<span class="keyword">var</span> name: <span class="keyword">type</span>,变量的声明格式</span><br><span class="line">    //weak--storage <span class="keyword">type</span>, 对象总存在于heap中， 因此总是用指针来访问， 所以声明变量时不需要加”&amp;“之类的操作符来表示是指针。 //系统自动管理内存，但不是garbage collection，而是reference counting（<span class="type">ARC</span>）</span><br><span class="line">    @<span class="type">IBOutlet</span> weak <span class="keyword">var</span> display: <span class="type">UILabel</span>!</span><br><span class="line"></span><br><span class="line">    //<span class="keyword">when</span> input number, ignore the initialized <span class="string">"0"</span></span><br><span class="line">    //两种初始化方法：initializer，直接赋值</span><br><span class="line">    <span class="keyword">var</span> userIsInTheMiddleOfTypingNumber: <span class="type">Bool</span> = <span class="literal">false</span></span><br><span class="line"></span><br><span class="line">    //define a <span class="keyword">method</span></span><br><span class="line">    //all number buttons are connected to this <span class="keyword">method</span></span><br><span class="line">    //@<span class="type">IBAction</span>--instance <span class="keyword">method</span></span><br><span class="line">    @<span class="type">IBAction</span> func appendDigit(sender: <span class="type">UIButton</span>) &#123; //non <span class="keyword">return</span> value</span><br><span class="line">    //@<span class="type">IBAction</span> func appendDigit(sender: <span class="type">UIButton</span>) --&gt; <span class="type">Double</span> &#123; //<span class="keyword">return</span> double</span><br><span class="line">        //decide which button act <span class="keyword">as</span> the sender</span><br><span class="line">        //<span class="keyword">let</span>--constant variable</span><br><span class="line">        //use dot to access a variable <span class="keyword">or</span> call a <span class="keyword">method</span></span><br><span class="line">        //digit没有声明特定的类型，但是swift是强类型语言，会自动推导类型'ype-inference'.</span><br><span class="line">        //这里查看digit的类型是显示“<span class="type">string</span>?”，问号表示optional（optional--<span class="keyword">not</span> <span class="type">set</span>(<span class="keyword">nil</span>,一种特殊的类型), 被推导的类型<span class="type">string</span>）,<span class="string">"!"</span>就是用来解包，获取正确的类型<span class="type">string</span></span><br><span class="line">        //假设把数字按钮“<span class="number">2</span>”设置的数字去掉，这里获取的值就是<span class="keyword">nil</span>，程序运行时按这个按钮就会导致程序崩溃</span><br><span class="line">        //因此这个“!”在调试阶段非常有用，如果有未设置的，很快就能发现bug，如果查看某个方法时，只要提示有“xxx?”，最后结果就应该加上“!”</span><br><span class="line">        <span class="keyword">let</span> digit = sender.currentTitle!</span><br><span class="line"></span><br><span class="line">        //<span class="string">"\()"</span> easily print values <span class="keyword">in</span> println</span><br><span class="line">        println(<span class="string">"digit=\(digit)"</span>)</span><br><span class="line">        <span class="keyword">if</span> userIsInTheMiddleOfTypingNumber &#123;</span><br><span class="line">            display.text = display.text! + digit</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            display.text = digit</span><br><span class="line">            userIsInTheMiddleOfTypingNumber = <span class="literal">true</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>关于optional类型的理解—todo</p>
+<ul>
+<li><a href="http://blog.csdn.net/jasonblog/article/details/28876823" target="_blank" rel="external">随手记Swift基础和OptionalType（问号?和感叹号!）</a></li>
+<li><a href="http://blog.csdn.net/woaifen3344/article/details/30244201" target="_blank" rel="external">Swift 学习之二十一：？和 ！（详解）</a></li>
+</ul>
+<h2 id="Lecture2-_More_Xcode_and_Swift,_MVC">Lecture2. More Xcode and Swift, MVC</h2><p>implicitly unwrapped optional<br>语法糖</p>
+<h2 id="[第3集]_应用MVC">[第3集] 应用MVC</h2><h2 id="[第4集]_Swift语言与Foundation框架">[第4集] Swift语言与Foundation框架</h2><h2 id="[第5集]_Objective-C_兼容性、Property_List和Views">[第5集] Objective-C 兼容性、Property List和Views</h2><h2 id="[第6集]_协议、代理和手势">[第6集] 协议、代理和手势</h2><h2 id="[第7集]_多重_MVC">[第7集] 多重 MVC</h2><h2 id="[第8集]_View_Controller_Lifecycle,_Autola">[第8集] View Controller Lifecycle, Autola</h2><h2 id="[第9集]_Scroll_View_and_Multithreading">[第9集] Scroll View and Multithreading</h2><h2 id="[第10集]_Table_View">[第10集] Table View</h2><h2 id="[第11集]_Unwind_Segues,_Alerts,_Timers,_View_Animation">[第11集] Unwind Segues, Alerts, Timers, View Animation</h2><h2 id="[第12集]_Dynamic_Animation">[第12集] Dynamic Animation</h2><h2 id="playground使用">playground使用</h2><p>Q:新建一个playground项目时提示“no such module called cocoa/uikit”<br>A:platform不匹配，创建的时候选择的时候是OSX，但是打开file inspector可以看到其platform可能是iOS，修改为相应的platform就可<br><a href="http://blog.csdn.net/xunyn/article/details/38518961" target="_blank" rel="external">Swift初窥—Playground</a></p>
+<hr>
+<ul>
+<li><a href="http://open.163.com/special/opencourse/ios7.html" target="_blank" rel="external">网易公开课：斯坦福大学公开课—iOS8应用开发</a></li>
+<li><a href="https://github.com/x140yu/Developing_iOS_8_Apps_With_Swift" target="_blank" rel="external">github相关链接</a></li>
+<li><a href="https://itunes.apple.com/us/course/developing-ios-8-apps-swift/id961180099" target="_blank" rel="external">itunes官网视频链接</a></li>
+</ul>
+  
+	</div>
+		<footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/iOS/">iOS</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/OC/">OC</a><a href="/tags/Swift/">Swift</a><a href="/tags/iOS/">iOS</a>
+  </div>
+
+</div>
+
+
+
+	<div class="article-share" id="share">
+	
+	  <div data-url="http://shawnelee88.github.io/2015/07/30/斯坦福大学公开课程-iOS8开发/" data-title="斯坦福大学公开课程_iOS8开发 | Learn &amp; Think" data-tsina="null" class="share clearfix">
+	  </div>
+	
+	</div>
+
+
+</footer>
+
+   	       
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
+ <div class="prev" >
+ <a href="/2015/07/30/IOS-FAQ/" title="IOS_FAQ">
+  <strong>上一篇：</strong><br/>
+  <span>
+  IOS_FAQ</span>
+</a>
+</div>
+
+
+<div class="next">
+<a href="/2015/07/16/hello-world/"  title="Hello World">
+ <strong>下一篇：</strong><br/> 
+ <span>Hello World
+</span>
+</a>
+</div>
+
+</nav>
+
+	
+<section id="comments" class="comment">
+	<div class="ds-thread" data-thread-key="2015/07/30/斯坦福大学公开课程-iOS8开发/" data-title="斯坦福大学公开课程_iOS8开发" data-url="http://shawnelee88.github.io/2015/07/30/斯坦福大学公开课程-iOS8开发/"></div>
+</section>
+
+
+</div>  
+      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
+<aside class="clearfix">
+
+  
+<div class="categorieslist">
+	<p class="asidetitle">分类</p>
+		<ul>
+		
+		  
+			<li><a href="/categories/iOS/" title="iOS">iOS<sup>4</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/mac/" title="mac">mac<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/杂记/" title="杂记">杂记<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/杂货铺/" title="杂货铺">杂货铺<sup>2</sup></a></li>
+		  
+		
+		</ul>
+</div>
+
+
+  
+  <div class="archiveslist">
+    <p class="asidetitle"><a href="/archives">归档</a></p>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/09/">九月 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/08/">八月 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/07/">七月 2015</a><span class="archive-list-count">7</span></li></ul>
+  </div>
+
+
+  
+  <div class="tagcloudlist">
+    <p class="asidetitle">标签云</p>
+    <div class="tagcloudlist clearfix">
+       <a href="/tags/MacVim/" style="font-size: 10px;">MacVim</a> <a href="/tags/OC/" style="font-size: 15px;">OC</a> <a href="/tags/Swift/" style="font-size: 10px;">Swift</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/iOS/" style="font-size: 20px;">iOS</a> <a href="/tags/mac/" style="font-size: 10px;">mac</a> <a href="/tags/oc/" style="font-size: 15px;">oc</a> <a href="/tags/proxychains/" style="font-size: 10px;">proxychains</a> <a href="/tags/shadowsocks/" style="font-size: 10px;">shadowsocks</a> <a href="/tags/杂货铺/" style="font-size: 10px;">杂货铺</a>
+    </div>
+  </div>
+
+
+  <div class="linkslist">
+  <p class="asidetitle">友情链接</p>
+    <ul>
+        
+          <li>
+            
+            	<a href="http://wuchong.me" target="_blank" title="Jark&#39;s Blog">Jark&#39;s Blog</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://coolshell.cn" target="_blank" title="酷壳--耗子哥">酷壳--耗子哥</a>
+            
+          </li>
+        
+    </ul>
+</div>
+
+  <div class="rsspart">
+	<a href="/atom.xml" target="_blank" title="rss">RSS 订阅</a>
+</div>
+
+</aside>
+</div>
+    </div>
+    <footer><div id="footer" >
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<section class="info">
+		<p> Hello ,I&#39;m ShawneLee in Hangzhou. <br/>
+			This is my blog,believe it or not.</p>
+	</section>
+	 
+	<div class="social-font" class="clearfix">
+		
+		<a href="http://weibo.com/1787656932" target="_blank" class="icon-weibo" title="微博"></a>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		<a href="mailto:shawnelee88@163.com" target="_blank" class="icon-email" title="Email Me"></a>
+		
+	</div>
+			
+		
+
+		<p class="copyright">
+		Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2015 
+		
+		<a href="/about" target="_blank" title="搬砖的">搬砖的</a>
+		
+		
+		</p>
+</div>
+</footer>
+    <script src="/js/jquery-2.0.3.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/jquery.qrcode-0.12.0.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+  
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else{
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+        
+    }
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  c.click(function(){
+    ta.css('display', 'block').addClass('fadeIn');
+  });
+  o.click(function(){
+    ta.css('display', 'none');
+  });
+  $(window).scroll(function(){
+    ta.css("top",Math.max(140,320-$(this).scrollTop()));
+  });
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina'),
+      description = $this.attr('description');
+  var html = [
+  '<div class="hoverqrcode clearfix"></div>',
+  '<a class="overlay" id="qrcode"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="微信"></a>',
+  '<a href="http://widget.renren.com/dialog/share?resourceUrl=' + encodedUrl + '&srcUrl=' + encodedUrl + '&title=' + title +'" class="article-share-renren" target="_blank" title="人人"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="微博"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+
+  $('.hoverqrcode').hide();
+
+  var myWidth = 0;
+  function updatehoverqrcode(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+    var qrsize = myWidth > 1024 ? 200:100;
+    var options = {render: 'image', size: qrsize, fill: '#2ca6cb', text: url, radius: 0.5, quiet: 1};
+    var p = $('.article-share-qrcode').position();
+    $('.hoverqrcode').empty().css('width', qrsize).css('height', qrsize)
+                          .css('left', p.left-qrsize/2+20).css('top', p.top-qrsize-10)
+                          .qrcode(options);
+  };
+  $(window).resize(function(){
+    $('.hoverqrcode').hide();
+  });
+  $('.article-share-qrcode').click(function(){
+    updatehoverqrcode();
+    $('.hoverqrcode').toggle();
+  });
+  $('.article-share-qrcode').hover(function(){}, function(){
+      $('.hoverqrcode').hide();
+  });
+});   
+</script>
+
+
+
+<script type="text/javascript">
+  var duoshuoQuery = {short_name:"shawnelee88"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+</script> 
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.article-content').each(function(i){
+    $(this).find('img').each(function(){
+      if ($(this).parent().hasClass('fancybox')) return;
+      var alt = this.alt;
+      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
+      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
+    });
+    $(this).find('.fancybox').each(function(){
+      $(this).attr('rel', 'article' + i);
+    });
+  });
+  if($.fancybox){
+    $('.fancybox').fancybox();
+  }
+}); 
+</script>
+
+
+
+<!-- Analytics Begin -->
+
+
+
+
+
+<!-- Analytics End -->
+
+<!-- Totop Begin -->
+
+	<div id="totop">
+	<a title="返回顶部"><img src="/img/scrollup.png"/></a>
+	</div>
+	<script src="/js/totop.js"></script>
+
+<!-- Totop End -->
+
+<!-- MathJax Begin -->
+<!-- mathjax config similar to math.stackexchange -->
+
+
+<!-- MathJax End -->
+
+<!-- Tiny_search Begin -->
+
+<!-- Tiny_search End -->
+
+  </body>
+</html>
